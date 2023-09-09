@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sign Up</title>
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      background-color: #f1f1f1;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+    }
+
+    h1 {
+      text-align: center;
+      margin-bottom: 20px;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+
+    form {
+      width: 50%;
+      margin: 0 auto;
+      background-color: #fff;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.2);
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+    }
+
+    table,
+    th,
+    td {
+      border: 1px solid #ddd;
+      padding: 10px;
+    }
+
+    table tr:nth-child(even) {
+      background-color: #f2f2f2;
+    }
+
+    table tr:hover {
+      background-color: #ddd;
+    }
+
+    table th {
+      padding-top: 12px;
+      padding-bottom: 12px;
+      text-align: left;
+      background-color: #4caf50;
+      color: white;
+    }
+
+    input[type="text"] {
+      width: 100%;
+      padding: 10px;
+      border: 1px solid #ddd;
+      border-radius: 5px;
+      outline: none;
+    }
+
+    input[type="submit"] {
+      width: 40%;
+      padding: 10px;
+      border: none;
+      border-radius: 5px;
+      background-color: #4caf50;
+      height: 50px;
+      color: #fff;
+      cursor: pointer;
+      margin-top: 20px;
+    }
+
+    input[type="submit"]:hover {
+      background-color: #45a049;
+    }
+
+    span {
+      color: red;
+    }
+
+    .logo {
+      height: 100px;
+      width: 100px;
+    }
+  </style>
+</head>
+
+<body ng-app>
+  <img src="./logo.jpg" alt="Techmo" class="logo">
+  <h1>Sign Up</h1>
+  <form name="myForm">
+    <table>
+      <tr>
+        <td>Name</td>
+        <td>
+          <input type="text" name="name" ng-model="name" ng-pattern="/^[a-zA-Z]+$/" required />
+
+          <span ng-show="myForm.name.$error.pattern">Name should contain only alphabets.</span>
+        </td>
+      </tr>
+      <tr>
+        <td>Mobile No.</td>
+        <td>
+          <input type="text" name="mobile" ng-model="mobile" ng-pattern="/^[0-9]{10}$/" required />
+
+          <span ng-show="myForm.mobile.$error.pattern">Mobile No. should contain 10 digits.</span>
+        </td>
+      </tr>
+      <tr>
+        <td>Password</td>
+        <td>
+          <input type="text" name="street" ng-model="street"
+            ng-pattern="/^(?=.*[A-Za-z])(?=.*\d)(?=.*[$@$!%*#?&])[A-Za-z\d$@$!%*#?&]{8,}$/" required />
+
+          <span ng-show="myForm.street.$error.pattern">Password should be at least 8 characters long and should contain at least
+            one number,one character and one special character</span>
+        </td>
+      </tr>
+      <tr>
+        <td>Address</td>
+        <td>
+          <input type="text" name="address" ng-model="address" required />
+        </td>
+      </tr>
+      <tr>
+        <td>Pincode</td>
+        <td>
+          <input type="text" name="pincode" ng-model="pincode" ng-pattern="/^[0-9]{6}$/" required />
+
+          <span ng-show="myForm.pincode.$error.pattern">Pincode should contain 6 digits.</span>
+        </td>
+      </tr>
+      <tr>
+        <td>Email</td>
+        <td>
+          <input type="text" name="email" ng-model="email" ng-pattern="/^[a-zA-Z0-9]+@[a-zA-Z0-9]+\.[a-zA-Z0-9]+$/"
+            required />
+
+          <span ng-show="myForm.email.$error.pattern">Email should be in the format: xyz@example.com</span>
+        </td>
+      </tr>
+    </table>
+    <input type="submit" value="Submit" onclick="window.location.href = './brandpage.html'" />
+  </form>
+</body>
+
+</html>

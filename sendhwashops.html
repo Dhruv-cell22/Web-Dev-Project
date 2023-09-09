@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Online Mobile Repairing Shops</title>
+	<style>
+		/* CSS styles for the navigation bar */
+		nav {
+			background-color: #333;
+			overflow: hidden;
+		}
+
+		nav a {
+			float: left;
+			color: white;
+			text-align: center;
+			padding: 14px 16px;
+			text-decoration: none;
+			font-size: 17px;
+		}
+
+		nav a:hover {
+			background-color: #ddd;
+			color: black;
+		}
+
+		/* CSS styles for the shop details */
+		.shop-container {
+			display: flex;
+			flex-wrap: wrap;
+			justify-content: space-around;
+			align-items: center;
+			margin-top: 50px;
+		}
+
+		.shop-card {
+			width: 300px;
+			background-color: #f2f2f2;
+			border-radius: 10px;
+			padding: 20px;
+			margin: 20px;
+			box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+		}
+
+		.shop-card h2 {
+			font-size: 24px;
+			margin-bottom: 10px;
+		}
+
+		.shop-card p {
+			font-size: 18px;
+			margin-bottom: 5px;
+		}
+
+		.shop-card ul {
+			list-style: none;
+			margin: 0;
+			padding: 0;
+		}
+
+		.shop-card li {
+			font-size: 16px;
+			margin-bottom: 5px;
+		}
+
+		/* CSS styles for the order form */
+		form {
+			width: 500px;
+			background-color: #f2f2f2;
+			border-radius: 10px;
+			padding: 20px;
+			margin: 20px auto;
+			box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+		}
+
+		label {
+			font-size: 18px;
+			display: block;
+			margin-bottom: 10px;
+		}
+
+		input[type="text"], input[type="tel"], select {
+			font-size: 16px;
+			padding: 8px;
+			width: 100%;
+			border: none;
+			border-radius: 5px;
+			margin-bottom: 10px;
+			box-sizing: border-box;
+		}
+
+		button {
+			font-size: 18px;
+			padding: 10px 20px;
+			background-color: #333;
+			color: white;
+			border: none;
+			border-radius: 5px;
+			cursor: pointer;
+		}
+
+		button:hover {
+			background-color: #ddd;
+			color: black;
+		}
+	</style>
+</head>
+<body>
+	<nav>
+		<a href="#">Home</a>
+	</nav>
+
+	<div class="shop-container">
+		<div class="shop-card">
+			<img src="shop1.jpg" alt="Shop 1 Logo" width="100" height="100">
+			<h2>Satyam Infotech</h2>
+			<p>Address: Sendhwa, Madhya Pradesh</p>
+			<p>Contact No.: 1234567890</p>
+			<ul>
+				<li>Screen Guard: Rs. 150</li>
+				<li>Display Screen: Rs. 4000</li>
+				<li>Speaker Rs.700</li>
+                <li>Motherboard: Rs. 1000</li>
+                <li>Battery: Rs. 2000</li>
+                <li>Charging Socket: Rs. 300</li>
+            </ul>
+            <button onclick="showForm('Satyam Infotech')">Order/Book</button>
+        </div>
+    
+        <div class="shop-card">
+            <img src="shop2.jpg" alt="Shop 2 Logo" width="100" height="100">
+            <h2>Havelles Galaxy</h2>
+            <p>Address: Sendhwa, Madhya Pradesh</p>
+            <p>Contact No.: 1234567890</p>
+            <ul>
+                <li>Screen Guard: Rs. 150</li>
+                <li>Display Screen: Rs. 4000</li>
+                <li>Speaker: Rs. 700</li>
+                <li>Motherboard: Rs. 1000</li>
+                <li>Battery: Rs. 2000</li>
+                <li>Charging Socket: Rs. 300</li>
+            </ul>
+            <button onclick="showForm('Havelles Galaxy')">Order/Book</button>
+        </div>
+    
+        <div class="shop-card">
+            <img src="shop3.jpg" alt="Shop 3 Logo" width="100" height="100">
+            <h2>Ashna Mobiles</h2>
+            <p>Address: Sendhwa, Madhya Pradesh</p>
+            <p>Contact No.: 1234567890</p>
+            <ul>
+                <li>Screen Guard: Rs. 150</li>
+                <li>Display Screen: Rs. 4000</li>
+                <li>Speaker: Rs. 700</li>
+                <li>Motherboard: Rs. 1000</li>
+                <li>Battery: Rs. 2000</li>
+                <li>Charging Socket: Rs. 300</li>
+            </ul>
+            <button onclick="showForm('Ashna Mobiles')">Order/Book</button>
+        </div>
+    
+        <div class="shop-card">
+            <img src="shop4.jpg" alt="Shop 4 Logo" width="100" height="100">
+            <h2>Vaishnav Electronics</h2>
+            <p>Address: Sendhwa, Madhya Pradesh</p>
+            <p>Contact No.: 1234567890</p>
+            <ul>
+                <li>Screen Guard: Rs. 150</li>
+                <li>Display Screen: Rs. 4000</li>
+                <li>Speaker: Rs. 700</li>
+                <li>Motherboard: Rs. 1000</li>
+                <li>Battery: Rs. 2000</li>
+                <li>Charging Socket: Rs. 300</li>
+            </ul>
+            <button onclick="showForm('Vaishnav Electronics')">Order/Book</button>
+        </div>
+    
+        <div class="shop-card">
+            <img src="shop5.jpg" alt="Shop 5 Logo" width="100" height="100">
+            <h2>iClick</h2>
+            <p>Address: Sendhwa, Madhya Pradesh</p>
+            <p>Contact No.: 1234567890</p>
+            <ul>
+                <li>Screen Guard: Rs. 150</li>
+                <li>Display Screen: Rs. 4000</li>
+                <li>Speaker: Rs700</li>
+                <li>Motherboard: Rs. 1000</li>
+                <li>Battery: Rs. 2000</li>
+                <li>Charging Socket: Rs. 300</li>
+                </ul>
+                <button onclick="showForm('iClick')">Order/Book</button>
+                </div>
+                <div class="shop-card">
+                    <img src="shop6.jpg" alt="Shop 6 Logo" width="100" height="100">
+                    <h2>Raj Infotech</h2>
+                    <p>Address: Sendhwa, Madhya Pradesh</p>
+                    <p>Contact No.: 1234567890</p>
+                    <ul>
+                        <li>Screen Guard: Rs. 150</li>
+                        <li>Display Screen: Rs. 4000</li>
+                        <li>Speaker: Rs. 700</li>
+                        <li>Motherboard: Rs. 1000</li>
+                        <li>Battery: Rs. 2000</li>
+                        <li>Charging Socket: Rs. 300</li>
+                    </ul>
+                    <button onclick="showForm('Raj Infotech')">Order/Book</button>
+                </div>
+            </div>
+            
+            <div id="order-form" class="form-popup">
+                <form action="" class="form-container">
+                    <h2>Order Form</h2>
+                    <label for="product">Product:</label>
+                    <input type="text" id="product" name="product" readonly>
+                    <label for="name">Name:</label>
+                    <input type="text" id="name" name="name" required>
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" required>
+                    <label for="phone">Phone:</label>
+                    <input type="tel" id="phone" name="phone" required>
+                    <label for="address">Address:</label>
+                    <textarea id="address" name="address" required></textarea>
+                    <button type="submit" class="btn">Submit</button>
+                    <button type="button" class="btn cancel" onclick="closeForm()">Close</button>
+                </form>
+            </div>
+            
+            <script>
+                function showForm(shop) {
+                    document.getElementById("product").value = "";
+                    document.getElementById("name").value = "";
+                    document.getElementById("email").value = "";
+                    document.getElementById("phone").value = "";
+                    document.getElementById("address").value = "";
+                    switch (shop) {
+                        case "Satyam Infotech":
+                            document.getElementById("product").value = "Screen Guard";
+                            break;
+                        case "Havelles Galaxy":
+                            document.getElementById("product").value = "Display Screen";
+                            break;
+                        case "Ashna Mobiles":
+                            document.getElementById("product").value = "Speaker";
+                            break;
+                        case "Vaishnav Electronics":
+                            document.getElementById("product").value = "Motherboard";
+                            break;
+                        case "iClick":
+                            document.getElementById("product").value = "Battery";
+                            break;
+                        case "Raj Infotech":
+                            document.getElementById("product").value = "Charging Socket";
+                            break;
+                    }
+                    document.getElementById("order-form").style.display = "block";
+                }
+            
+                function closeForm() {
+                    document.getElementById("order-form").style.display = "none";
+                }
+            </script>
+            
+                
+                
+    

@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>techmo</title>
+  <link rel="stylesheet" href="./navbar.css">
+  <style>
+    .A{
+      height:120px;
+    }
+    main {
+      display: flex;
+      flex-direction: column;
+      border: 1px solid black;
+      border-radius: 20px;
+      height: 600px;
+    }
+
+    main table tr td {
+      width: 30%;
+    }
+
+    main table tr {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: row;
+
+    }
+
+    main table tr td {
+      cursor: pointer;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    main form {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: ß center;
+    }
+    body {
+      font-family: Arial, sans-serif;
+      background-color: white;
+      margin: 0;
+      padding: 0;
+    }
+
+    h1 {
+      text-align: center;
+      margin-top: 20px;
+      color: #333;
+    }
+
+    form {
+      background-color: white;
+      max-width: 500px;
+      margin: 20px auto;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
+    }
+
+    label {
+      display: block;
+      margin-top: 10px;
+      color: #333;
+    }
+
+    input[type="text"] {
+      width: 100%;
+      padding: 10px;
+      border-radius: 5px;
+      border: none;
+      background-color: white;
+    }
+
+    input[type="submit"] {
+      display: block;
+      margin-top: 20px;
+      padding: 10px;
+      background-color: #333;
+      color: #fff;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    footer {
+      background-color: #f2f2f2;
+      padding: 20px 0;
+      text-align: center;
+    }
+
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    p {
+      margin: 0;
+    }
+    .logo{
+      position:fixed;
+    }
+    .flex {
+      width: 100vw;
+      display: flex;
+      justify-content: end;
+    }
+    form {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+label {
+  margin-bottom: 5px;
+}
+
+select, textarea, input[type="text"] {
+  padding: 5px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 16px;
+}
+
+input[type="submit"] {
+  background-color: #4CAF50;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+input[type="submit"]:hover {
+  background-color: #3e8e41;
+}
+  </style>
+</head>
+
+<body>
+  <nav>
+    <div class="logo">
+      <a href="./brandpage.html"><img src="./logo.jpg" alt=""></a>
+    </div>
+    <div class="flex">
+      <ul>
+        <li><a href="./brandpage.html">Home</a></li>
+        <li><a href="about-us.html">About Us</a></li>
+        <li><a href="contactus.html">Contact Us</a></li>
+      </ul>
+    </div>
+  </nav>
+  <main>
+    <table>
+      <tr height="200px">
+        <td><a href="#f"><img src="./12.png" id="oneplus" alt="oneplus" class="A"onclick="document.getElementById('model').value = 'Iphone 12'"></a></td>
+        <td><a href="#f"><img src="./13.png" id="samsung" alt="samsung" class="A"onclick="document.getElementById('model').value = 'Iphone 13'"></a></td>
+        <td><a href="#f"><img src="./14.png" id="apple" style="height: 150px;" alt="apple"onclick="document.getElementById('model').value = 'Iphone 14'"></a></td>
+      </tr>
+      <tr height="10px">
+        <td>Iphone 12</td>
+        <td>Iphone 13</td>
+        <td>Iphone 14</td>
+      </tr>
+      <tr><td><br><br></td></tr>
+      <tr height="200px">
+        <td><a href="#f"><img src="./14plus.png" id="redmi" style="height: 120px;" alt="mi"onclick="document.getElementById('model').value = 'Iphone 14plus'"></a></td>
+        <td><a href="#f"><img src="./14promax.png" id="vivo" style="height: 120px;" alt="vivo"onclick="document.getElementById('model').value = 'Iphone 14promax'"></a></td>
+        <td><a href="#f"><img src="./Se.png" id="moto" style="height: 120px;" alt="moto"onclick="document.getElementById('model').value = 'Iphone SE'"></a></td>
+      </tr>
+      <tr height="10px">
+        <td>Iphone 14plus</td>
+        <td>Iphone 14promax</td>
+        <td>Iphone SE</td>
+      </tr>
+    </table>
+  </main>
+
+  <footer>
+    <div class="container">
+      <p>&copy; 2023 Techmo</p>
+    </div>
+  </footer>
+
+</body>
+<form id="f">
+  <label for="model">Model Name:</label>
+  <input type="text" id="model" name="model" required>
+
+  <label for="product">Select a part:</label>
+  <select id="product" name="product" required>
+    <option value="">Select part</option>
+    <option value="screen-guard">Screen Guard</option>
+    <option value="display-screen">Display Screen</option>
+    <option value="battery">Battery</option>
+    <option value="speaker">Speaker</option>
+    <option value="charging-socket">Charging Socket</option>
+    <option value="camera">Camera</option>
+    <option value="motherboard">Motherboard</option>
+  </select>
+
+  <label for="description">Description:</label>
+  <textarea id="description" name="description" required></textarea>
+
+  <label for="pincode">Enter your pincode:</label>
+  <input type="text" id="pincode" name="pincode" pattern="^(451666|425405|395008|451010)$" maxlength="6" required>
+
+  <input type="submit" value="Submit">
+</form>
+
+<script>
+const form = document.getElementById('f');
+
+form.addEventListener('submit', function(event) {
+  const modelInput = document.getElementById('model');
+  const pincodeInput = document.getElementById('pincode');
+  const descriptionInput = document.getElementById('description');
+  
+  const modelValue = modelInput.value.trim();
+  const pincodeValue = pincodeInput.value.trim();
+  const descriptionValue = descriptionInput.value.trim();
+  
+  const validPincodeRegex = /^(451666|425405|395008|451010)$/;
+  
+  if (modelValue === '') {
+    alert('Please enter the model name.');
+    event.preventDefault();
+  }
+  
+  if (!validPincodeRegex.test(pincodeValue)) {
+    alert('Please enter a valid pincode.');
+    event.preventDefault();
+  }
+  
+  if (descriptionValue === '') {
+    alert('Please enter a description.');
+    event.preventDefault();
+  }
+  
+  if (modelValue !== '' && validPincodeRegex.test(pincodeValue) && descriptionValue !== '') {
+    window.location.href = './sendhwashops.html';
+  }
+});
+
+</script>
+
+
+
+
+</html>
